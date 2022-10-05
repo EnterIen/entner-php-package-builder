@@ -7,7 +7,7 @@
 
 namespace Entner\PhpPackageBuilder;
 
-use Entner\PackageBuilder\Commands\PhpPackageBuilderCommand;
+use Entner\PhpPackageBuilder\Commands\PhpPackageBuilderCommand;
 use Symfony\Component\Console\Application as BasicApplication;
 
 /**

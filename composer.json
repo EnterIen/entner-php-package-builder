@@ -1,30 +1,17 @@
 {
-    "name": "entner/php-package-builder",
-    "description": "A php package builder.",
+    "name": "1",
+    "description": "3",
+    "license": "MIT",
     "authors": [
         {
-            "name": "Frank",
+            "name": "4",
             "email": "wangyiicloud@icloud.com"
         }
     ],
-    "require": {
-        "symfony/console": "^5.0.0",
-        "symfony/process": "^5.0.0",
-        "symfony/filesystem": "^5.0.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.2"
-    },
+    "require": {},
     "autoload": {
         "psr-4": {
-            "Entner\\PhpPackageBuilder\\": "src"
+            "2\\": "src"
         }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Overtrue\\Tests\\": "tests/"
-        }
-    },
-    "bin": ["bin/package-builder-plus"],
-    "license": "MIT"
+    }
 }

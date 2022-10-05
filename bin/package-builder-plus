@@ -6,13 +6,13 @@ use Entner\PhpPackageBuilder\Application;
 
 $configs = require_once dirname(dirname(__FILE__)).'/config.php';
 
-// if (file_exists(dirname(dirname(__FILE__)).'/vendor/autoload.php')) {
-//   require_once dirname(dirname(__FILE__)).'/vendor/autoload.php';
-// } else if (file_exists(dirname(__FILE__).'/../../../autoload.php')) {
-//   require_once dirname(__FILE__).'/../../../autoload.php';
-// } else {
-//   throw new Exception('Can not load composer autoloader; Try running "composer install".');
-// }
+if (file_exists(dirname(dirname(__FILE__)).'/vendor/autoload.php')) {
+  require_once dirname(dirname(__FILE__)).'/vendor/autoload.php';
+} else if (file_exists(dirname(__FILE__).'/../../../autoload.php')) {
+  require_once dirname(__FILE__).'/../../../autoload.php';
+} else {
+  throw new Exception('Can not load composer autoloader; Try running "composer install".');
+}
 
 $builder = new Application('Package Builder', '@package_version@', $configs);
 $builder->run();
