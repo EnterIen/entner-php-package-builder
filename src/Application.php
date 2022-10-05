@@ -5,9 +5,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Entner\PhpPackageBuilder;
+namespace Entner\PHPPackageBuilder;
 
-use Entner\PhpPackageBuilder\Commands\PhpPackageBuilderCommand;
+use Entner\PHPPackageBuilder\Commands\PHPPackageBuilderCommand;
 use Symfony\Component\Console\Application as BasicApplication;
 
 /**
@@ -27,6 +27,6 @@ class Application extends BasicApplication
   {
     parent::__construct($name, $version);
 
-    $this->add(new PhpPackageBuilderCommand($configs));
+    $this->add(new PHPPackageBuilderCommand($configs));
   }
 }

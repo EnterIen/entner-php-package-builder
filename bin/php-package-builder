@@ -2,7 +2,7 @@
 
 <?php
 
-use Entner\PhpPackageBuilder\Application;
+use Entner\PHPPackageBuilder\Application;
 
 $configs = require_once dirname(dirname(__FILE__)).'/config.php';
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Entner\PhpPackageBuilder\Commands;
+namespace Entner\PHPPackageBuilder\Commands;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -10,7 +10,7 @@ use Symfony\Component\Console\Question\ConfirmationQuestion;
 use Symfony\Component\Console\Question\Question;
 use Symfony\Component\Filesystem\Filesystem;
 
-class PhpPackageBuilderCommand extends Command {
+class PHPPackageBuilderCommand extends Command {
 
   protected $gits = [];
   protected $packageInfo = [];
@@ -32,7 +32,6 @@ class PhpPackageBuilderCommand extends Command {
   protected function destructDefaultConfigs(Array $configs)
   {
     $this->questions = $configs['questions'];
-    $this->packageDirectory = $configs['packageDirectory'];
     $this->stubsDirectory   = $configs['stubsDirectory'];
   }
 
@@ -100,7 +99,7 @@ class PhpPackageBuilderCommand extends Command {
     $this->packageInfo['VENDOR']  = 'VENDOR';
     $this->packageInfo['PACKAGE'] = 'PACKAGE';
 
-    $this->packageDirectory = $this->packageDirectory . '/' . $input->getArgument('directory');
+    $this->packageDirectory = './' . $input->getArgument('directory');
 
     return $this;
   }
