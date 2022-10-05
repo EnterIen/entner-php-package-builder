@@ -1,30 +1,55 @@
-<h1 align="center"> product </h1>
+<h1 align="center"> PHP-Package-Builder </h1>
 
 <p align="center"> .</p>
 
-
-## Installing
+## Installation
 
 ```shell
-$ composer require foor/product -vvv
+$ composer require entner/php-package-builder -vvv
 ```
 
 ## Usage
 
-TODO
-1. vendor/bin 
-2. Service Provider
-3. Register By Hand 
+A tool to help you automatically create PHP package, for specifics, you can refer to:
 
-## Contributing
+```shell
+$ php-package-builder help
+```
 
-You can contribute in one of three ways:
+You can create php package with:
 
-1. File bug reports using the [issue tracker](https://github.com/foor/product/issues).
-2. Answer questions or fix bugs on the [issue tracker](https://github.com/foor/product/issues).
-3. Contribute new features or update the wiki.
+```shell
+$ php-package-builder build [target directory]
+```
 
-_The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-2 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._
+Example:
+
+```shell
+$ php-package-builder build ./
+
+Name of package: PPB
+Namespace of package: Entner\PPB
+Description of package: A builder
+Author name of package: x
+Author email of package:x@example.com
+License of package: MIT
+
+```
+
+The follow package will be created:
+
+```
+.
+├── composer.json
+├── .editorconfig
+├── .gitattributes
+├── .gitignore
+├── README.md
+└── src
+    └── .gitkeep
+
+```
+
 
 ## License
 
